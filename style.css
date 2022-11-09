@@ -4,6 +4,25 @@ body{
     text-align: center;
 }
 
+header {
+    background-color: white;
+}
+
+a {
+    text-decoration:none;
+    color: black;
+}
+
+HR {
+    color: aquamarine;
+}
+
+.logo {
+
+    align-items: flex-start;
+    
+}
+
 span {
 
     display: flex;
@@ -19,8 +38,7 @@ span {
 height: 100vh;
 width: 100vw;
 background-image: url("images/background.jpg");
-background-position: center center;
-background-size: cover;
+background-position: center;
 color: white;
 text-align: white;
 }
@@ -33,6 +51,7 @@ h1 {
     text-align: center;
     margin: 0 ;
     padding-top: 100px ;
+
    
 
 }
@@ -58,6 +77,8 @@ h3 {
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+   
+    
 
 }
 
@@ -65,18 +86,19 @@ h4 {
     text-align: right;
     font-size: 30px;
     margin: 0 1rem 0 1rem;
+    
    
     
 }
 
 
 .content{
-   
+    justify-content: center;
     margin-top:200px;
-    padding: 100px ;
+    height: 600px;
     width: 20vw;
     background-color: white;
-    border-radius: 10px ;
+    border-radius: 20px ;
 
 }
 
@@ -86,7 +108,14 @@ p {
     font-size: 25px;
 }
 
+.box {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+}
+
 .logo {
+    margin-top: 100px;
     height: 200px;
     width: 200px;
 }
@@ -97,20 +126,102 @@ p {
 }
 
 .champs {
-
+    /*height: 600px;*/
     display: flex;
     flex-direction: column;
     padding-left: 100px;
     padding-right: 100px;
+    height: 600px;
+
+}  
+
+
+#search-departure {
+    margin-top: 60px;
+    border-radius: 2px;
+    font-size: 25px;
+
+}
+
+#search-arrival {
+    margin-top:0;
+    font-size: 25px;
 }
 
 input {
-
+    margin-top: 100px;
     background-color: rgb(201, 201, 201);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    border-radius: 5px;
+    height: 50px;
+    width: 400px;
+
 }
+
 
 button {
-   background-color: rgb(131, 239, 187);
+   color: white;
+   background-color: rgb(116, 202, 161);
+   margin-top: 150px;
+   margin-bottom: auto;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-size: 25px;
+   border-radius: 5px;
+   height: 65px;
+   width: 400px;
+}
+
+
+
+
+/* ------------CART--------------- */
+
+#contenucart {
+    background-color: rgb(217, 217, 217);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contentcart {
+
+    padding: 150px 400px 150px 400px;
+    width: 20vw;
+    background-color: white;
+    border-radius: 10px ;
 
 }
+
+
+
+
+
+/* ------------BOOKING--------------- */
+
+#contenubooking {
+    background-color: rgb(217, 217, 217);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.contentbooking{
+    padding: 150px 400px 150px 400px;
+    width: 20vw;
+    background-color: white;
+    border-radius: 10px ;
+
+}
+
+   
+
+
+
+
 
