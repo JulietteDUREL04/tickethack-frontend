@@ -6,20 +6,30 @@ const searchArrival = document.getElementById('search-arrival')
 const searchDate = document.getElementById('search-date')
 
 searchButton.addEventListener('click', () => {
-const departure = searchDeparture.value
-const arrival = searchArrival.value
-const date = searchDate.value
-//note : date format 2022-11-22
+    const departure = searchDeparture.value
+    const arrival = searchArrival.value
+    const date = searchDate.value
+    //note : date format 2022-11-22
 
-const searchResult = fetch(`http://localhost:3000/trips/${departure}&${arrival}&${date}`)
- .then(response => response.json())
- .then(trips => {
-   console.log(trips);
-   return trips;
- });
+    const searchResult = fetch(`http://localhost:3000/trips/${departure}&${arrival}&${date}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.trips);
+            for (const trip of data.trips) {
+                const arrival = trip.arrival
+                const date = new Date(trip.date)
+                const departure = trip.departure
+                const price = trip.price
+                document.getElementById('search-result').innerHTML += `
+                <div class = 'trip'> 
+                    <p>${arrival}>${departure}</p>
+                    <p>${date.getHours()}:${date.getMinutes()}</p>
+                    <p>${price}€</p>
+                    <button class='book'>Book</button>
+                </div>       
+       `
+            }
+        });
 
 
-
-    //quand ce sera OK, les ajouter avec innerHTML +=
-    //remettre le addevent listener ?
 })
